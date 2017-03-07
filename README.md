@@ -3,7 +3,7 @@ Check a MongoDB Database
 
 Usage: 
 ``` 
-check_mongodb -h 127.0.0.1 -u root -p 1234 -d local --collection test -q "db.test.findOne()"
+check_mongodb -h 127.0.0.1 -u root -p 1234 -d local -q "db.test.findOne()"
 ```
 Output:
 ```
