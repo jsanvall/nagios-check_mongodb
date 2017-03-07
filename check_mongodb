@@ -6,7 +6,6 @@ function usage {
   echo "    -p password Example: 1234"
   echo "    -h host Example: localhost"
   echo "    -d database Example: local"
-  echo "    --collection Example: test"
   echo "    -q query Example: db.test.findOne()"
   echo ""
   exit 1
@@ -32,10 +31,6 @@ do
     DATABASE="$2"
     shift
     ;;
-    --collection)
-    COLLECTION="$2"
-    shift
-    ;;
     -q)
     QUERY="$2"
     shift
@@ -50,7 +45,6 @@ done
 
 [ ! -z ${HOST} ] && \
 [ ! -z ${DATABASE} ] && \
-[ ! -z ${COLLECTION} ] && \
 [ ! -z ${QUERY} ] || usage
 
 if [[ ${USER} == "" || ${PASS} == "" ]]
